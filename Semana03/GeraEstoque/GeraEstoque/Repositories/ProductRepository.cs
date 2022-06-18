@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using GeraEstoque.Models;
 
 namespace GeraEstoque.Repositories
 {
-     class ProductRepository
+    public class ProductRepository
     {
+
+        public IList<Product> Produtos { get; set; }
+        //construtor
+        public ProductRepository()
+        {
+            Produtos = new List<Product>();
+        }
     }
 }

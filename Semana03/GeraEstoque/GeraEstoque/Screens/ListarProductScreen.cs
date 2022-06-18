@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GeraEstoque.Repositories;
+using GeraEstoque.Models;
+
 
 namespace GeraEstoque.Screens
 {
-    class ListarProductScreen
+    public class ListarProductScreen
     {
+
+        public static void Iniciar(ProductRepository repository)
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de Produtos Cadastrados.");
+            Console.WriteLine("-------------------------------");
+            foreach (var product in repository.Produtos)
+            {
+                Console.WriteLine(product.ToString());
+            }
+            Console.ReadLine();
+        }
+
+
+
     }
 }

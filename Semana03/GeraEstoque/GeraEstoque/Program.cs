@@ -1,11 +1,16 @@
-﻿namespace GeraEstoque
-{
-    internal class Program
+﻿using GeraEstoque.Repositories;
+using GeraEstoque.Screens;
+
+
+
+namespace GeraEstoque
+{ class Program
     {
         static void Main(string[] args)
         {
-            Menu.Mostrar();
-            Console.WriteLine("Exercicios semana03");
+            //Menu.Mostrar();
+            var repository = new ProductRepository();
+            MenuScreen.Mostrar(repository);
         }
     }
 }
