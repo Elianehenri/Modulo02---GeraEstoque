@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Menu.Mostrar();
+            Console.WriteLine("Exercicios semana03");
         }
     }
 }
