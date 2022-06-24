@@ -47,6 +47,7 @@
             this.btnSalvarDados = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtLista = new System.Windows.Forms.TextBox();
+            this.btnLimparDados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNome
@@ -56,7 +57,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(295, 23);
             this.txtNome.TabIndex = 0;
-            
             // 
             // label1
             // 
@@ -192,7 +192,7 @@
             this.btnSalvarDados.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSalvarDados.Location = new System.Drawing.Point(12, 320);
             this.btnSalvarDados.Name = "btnSalvarDados";
-            this.btnSalvarDados.Size = new System.Drawing.Size(295, 26);
+            this.btnSalvarDados.Size = new System.Drawing.Size(130, 26);
             this.btnSalvarDados.TabIndex = 16;
             this.btnSalvarDados.Text = "Salvar Dados";
             this.btnSalvarDados.UseVisualStyleBackColor = false;
@@ -216,12 +216,24 @@
             this.txtLista.Size = new System.Drawing.Size(313, 64);
             this.txtLista.TabIndex = 18;
             // 
+            // btnLimparDados
+            // 
+            this.btnLimparDados.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLimparDados.Location = new System.Drawing.Point(179, 320);
+            this.btnLimparDados.Name = "btnLimparDados";
+            this.btnLimparDados.Size = new System.Drawing.Size(128, 26);
+            this.btnLimparDados.TabIndex = 19;
+            this.btnLimparDados.Text = "Limpar Dados";
+            this.btnLimparDados.UseVisualStyleBackColor = false;
+            this.btnLimparDados.Click += new System.EventHandler(this.btnLimparDados_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLimparDados);
             this.Controls.Add(this.txtLista);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnSalvarDados);
@@ -269,5 +281,6 @@
         private Button btnSalvarDados;
         private Label label9;
         private TextBox txtLista;
+        private Button btnLimparDados;
     }
 }
