@@ -17,7 +17,25 @@ namespace ExercicioSemana04Mod02
         public decimal ValorCurso { get; set; }
         public decimal ValorDesconto { get; set; }
         public decimal ValorMulta { get; set; }
-
         #endregion
+
+        #region construtores
+        public FichaDeInscricao(string nome, string curso, string escolaridade, DateTime dataDeNascimento, decimal valorCurso, decimal valorDesconto, decimal valorMulta)
+        {
+            Nome = nome;
+            Curso = curso;
+            Escolaridade = escolaridade;
+            DataDeNascimento = dataDeNascimento;
+            ValorCurso = valorCurso;
+            ValorDesconto = valorDesconto;
+            ValorMulta = valorMulta;
+        }
+
+        # endregion
+
+
+
     }
+
+}
 }
