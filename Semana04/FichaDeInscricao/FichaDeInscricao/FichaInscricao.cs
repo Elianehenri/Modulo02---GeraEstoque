@@ -14,10 +14,26 @@ namespace FichaDeInscricao
         public string Curso { get; set; }
         public string Escolaridade { get; set; }
         public DateTime DataDeNascimento { get; set; }//
-        public decimal ValorCurso { get; set; }
-        public decimal ValorDesconto { get; set; }
-        public decimal ValorMulta { get; set; }
+        public double ValorCurso { get; set; }
+        public double ValorDesconto { get; set; }
+        public double ValorMulta { get; set; }
 
+        #endregion
+
+        //exercicio 02
+        #region construtores
+        public FichaInscricao(string nome, string curso, string escolaridade, DateTime dataDeNascimento, double valorCurso, double valorDesconto, double valorMulta)
+        {
+            Nome = nome;
+            Curso = curso;
+            Escolaridade = escolaridade;
+            DataDeNascimento = dataDeNascimento;
+            ValorCurso = valorCurso;//decimal,double
+            ValorDesconto = valorDesconto;//decimal,double
+            ValorMulta = valorMulta;//decimal,double
+
+           
+        }
         #endregion
     }
 }
