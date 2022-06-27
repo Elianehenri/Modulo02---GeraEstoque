@@ -28,9 +28,9 @@ namespace FichaDeInscricao
             Curso = curso;
             Escolaridade = escolaridade;
             DataDeNascimento = dataDeNascimento;
-            ValorCurso = valorCurso;//decimal,double
-            ValorDesconto = valorDesconto;//decimal,double
-            ValorMulta = valorMulta;//decimal,double
+            ValorCurso = valorCurso; 
+            ValorDesconto = valorDesconto;
+            ValorMulta = valorMulta;
 
            
         }
