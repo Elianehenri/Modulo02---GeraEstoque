@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace FichaDeInscricao
 {
-  class FichaInscricao
+    class FichaInscricao
     {   //exercicio 01
         #region propriedades
         public string Nome { get; set; }
         public int Idade { get; }
         public string Curso { get; set; }
         public string Escolaridade { get; set; }
-        public DateTime DataDeNascimento { get; set; }//
+        public DateTime DataDeNascimento { get; set; }
         public double ValorCurso { get; set; }
         public double ValorDesconto { get; set; }
         public double ValorMulta { get; set; }
@@ -28,12 +24,25 @@ namespace FichaDeInscricao
             Curso = curso;
             Escolaridade = escolaridade;
             DataDeNascimento = dataDeNascimento;
-            ValorCurso = valorCurso; 
+            ValorCurso = valorCurso;
             ValorDesconto = valorDesconto;
             ValorMulta = valorMulta;
 
+            Idade = CalcularIdade();
+            #endregion
+
            
+
         }
+        //exercicio 03
+        #region metodo privado calcular idade 
+
+        private int CalcularIdade()
+        {
+            return DateTime.Now.Year - DataDeNascimento.Year;
+        }
+
         #endregion
+
     }
 }

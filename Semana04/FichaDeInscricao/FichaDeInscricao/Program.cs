@@ -16,15 +16,17 @@ namespace FichaDeInscricao
             Console.Write("Digite data de nascimento: ");
             DateTime dataDeNascimento = Convert.ToDateTime(Console.ReadLine());
 
+            FichaInscricao fichaInscricao = new FichaInscricao(" ", " ", " ", Convert.ToDateTime(dataDeNascimento), 0, 0, 0);
+
             Console.Write("Valor do Curso: ");
-           double valorCurso = int.Parse(Console.ReadLine());
+            double valorCurso = int.Parse(Console.ReadLine());
             Console.Write("Valor do Desconto: ");
             double valorDesconto = int.Parse(Console.ReadLine());
             Console.Write("Valor da Multa: ");
             double valorMulta = int.Parse(Console.ReadLine());
             Console.WriteLine();
             Console.ReadLine();
-
+            Console.WriteLine(fichaInscricao.Idade);
         }
     }
 }
