@@ -42,8 +42,7 @@ namespace FichaDeInscricao
 
             Console.ReadLine();
             Console.WriteLine(fichaInscricao.Idade);
-            Console.WriteLine(fichaInscricao.Nome);
-            Console.WriteLine(fichaInscricao.ValorDesconto);
+           
         }
     }
 }
