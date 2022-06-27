@@ -16,17 +16,34 @@ namespace FichaDeInscricao
             Console.Write("Digite data de nascimento: ");
             DateTime dataDeNascimento = Convert.ToDateTime(Console.ReadLine());
 
-            FichaInscricao fichaInscricao = new FichaInscricao(" ", " ", " ", Convert.ToDateTime(dataDeNascimento), 0, 0, 0);
-
+           
             Console.Write("Valor do Curso: ");
             double valorCurso = int.Parse(Console.ReadLine());
             Console.Write("Valor do Desconto: ");
             double valorDesconto = int.Parse(Console.ReadLine());
             Console.Write("Valor da Multa: ");
             double valorMulta = int.Parse(Console.ReadLine());
+           
+            FichaInscricao fichaInscricao = new FichaInscricao(" ", " ", " ", Convert.ToDateTime(dataDeNascimento), 0, 0, 0);
+           
             Console.WriteLine();
+            if (fichaInscricao.ValorDesconto == 0)
+            {
+                Console.Write(FormatacaoText.Formatacao(fichaInscricao.Nome, fichaInscricao.Curso, fichaInscricao.ValorCurso));
+            }
+            else if (fichaInscricao.ValorDesconto > 0 && fichaInscricao.Idade < 18)
+            {
+                Console.Write(FormatacaoText.Formatacao(fichaInscricao.Nome, fichaInscricao.Curso, fichaInscricao.ValorCurso, fichaInscricao.ValorDesconto, fichaInscricao.Idade));
+            }
+            else if (fichaInscricao.ValorDesconto > 0)
+            {
+                Console.Write(FormatacaoText.Formatacao(fichaInscricao.Nome, fichaInscricao.Curso, fichaInscricao.ValorCurso, fichaInscricao.ValorDesconto));
+            }
+
             Console.ReadLine();
             Console.WriteLine(fichaInscricao.Idade);
+            Console.WriteLine(fichaInscricao.Nome);
+            Console.WriteLine(fichaInscricao.ValorDesconto);
         }
     }
 }
