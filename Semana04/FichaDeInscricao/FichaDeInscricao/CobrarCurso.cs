@@ -16,15 +16,11 @@ namespace FichaDeInscricao
             this.valorDesconto = valorDesconto;
         }
 
-        //public double ValorCurso { get; set; }
-        //public double ValorMulta { get; set; }
-        //public double ValorDesconto { get; set; }
-        //public double Resultado { get => this.resultado; }
-
+       
         //exercicio 08
-        //public void CalcularResultado()
-        //{
-        //    resultado = valorMulta > 0 ? valorCurso + valorMulta : valorCurso - valorDesconto;
-        //}
+        public void CalcularResultado()
+        {
+            resultado = valorMulta > 0 ? valorCurso + valorMulta : valorCurso - valorDesconto;
+        }
     }
 }
