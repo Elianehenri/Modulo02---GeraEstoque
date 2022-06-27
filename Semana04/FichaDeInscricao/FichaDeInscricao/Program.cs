@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 
 namespace FichaDeInscricao
 {
@@ -44,10 +44,11 @@ namespace FichaDeInscricao
             Console.Write("Idade: ");
             Console.WriteLine(fichaInscricao.Idade);
 
+
             CobrarCurso cobrarCurso = new CobrarCurso(fichaInscricao.ValorCurso, fichaInscricao.ValorMulta, fichaInscricao.ValorDesconto);
-            cobrarCurso.CalcularResultado( );
+            cobrarCurso.CalcularResultado();
             Console.WriteLine(cobrarCurso);
-           
+
         }
     }
 }
