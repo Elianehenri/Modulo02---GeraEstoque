@@ -15,7 +15,7 @@ namespace FichaDeInscricao
             string escolaridade = Console.ReadLine();
             Console.Write("Digite data de nascimento: ");
             DateTime dataDeNascimento = Convert.ToDateTime(Console.ReadLine());
-
+          
            
             Console.Write("Valor do Curso: ");
             double valorCurso = int.Parse(Console.ReadLine());
@@ -41,7 +41,12 @@ namespace FichaDeInscricao
             }
 
             Console.ReadLine();
+            Console.Write("Idade: ");
             Console.WriteLine(fichaInscricao.Idade);
+
+            CobrarCurso cobrarCurso = new CobrarCurso(fichaInscricao.ValorCurso, fichaInscricao.ValorMulta, fichaInscricao.ValorDesconto);
+           cobrarCurso.CalcularResultado( );
+            Console.WriteLine(cobrarCurso);
            
         }
     }
