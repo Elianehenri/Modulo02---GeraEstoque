@@ -1,8 +1,6 @@
-﻿
-
-namespace FichaDeInscricao
+﻿namespace FichaDeInscricao.Entities
 {
-    class FichaInscricao
+    public class FichaInscricao
     {   //exercicio 01
         #region propriedades
         public string Nome { get; set; }
@@ -18,6 +16,10 @@ namespace FichaDeInscricao
 
         //exercicio 02
         #region construtores
+        public FichaInscricao()
+        {
+
+        }
         public FichaInscricao(string nome, string curso, string escolaridade, DateTime dataDeNascimento, double valorCurso, double valorDesconto, double valorMulta)
         {
             Nome = nome;
@@ -31,7 +33,7 @@ namespace FichaDeInscricao
             Idade = CalcularIdade();
             #endregion
 
-           
+
 
         }
         //exercicio 03

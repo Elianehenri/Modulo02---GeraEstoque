@@ -1,8 +1,10 @@
 ﻿
 
+using FichaDeInscricao.Entities;
+
 namespace FichaDeInscricao
 {
-   class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -24,9 +26,24 @@ namespace FichaDeInscricao
             Console.Write("Valor da Multa: ");
             double valorMulta = int.Parse(Console.ReadLine());
            
-            FichaInscricao fichaInscricao = new FichaInscricao(" ", " ", " ", Convert.ToDateTime(dataDeNascimento), 0, 0, 0);
+            
+            //FichaInscricao fichaInscricao = new FichaInscricao("", " ", " ", Convert.ToDateTime(dataDeNascimento), 0, 0, 0);
+            FichaInscricao fichaInscricao = new FichaInscricao(nome, curso, escolaridade, Convert.ToDateTime(dataDeNascimento) ,  valorCurso, valorDesconto, valorMulta );
+
            
-            Console.WriteLine();
+
+            CobrarCurso cobrarCurso = new CobrarCurso(fichaInscricao.ValorCurso,fichaInscricao.ValorMulta,fichaInscricao.ValorDesconto);
+            cobrarCurso.CalcularResultado( );
+            Console.Write("Idade: ");
+            Console.WriteLine(fichaInscricao.Idade);
+            FormatacaoText Formatacao = new FormatacaoText();
+            cobrarCurso.Resultado.ToString("c");
+            //Console.WriteLine( );
+
+           
+
+            //Console.WriteLine();
+
             if (fichaInscricao.ValorDesconto == 0)
             {
                 Console.Write(FormatacaoText.Formatacao(fichaInscricao.Nome, fichaInscricao.Curso, fichaInscricao.ValorCurso));
@@ -40,15 +57,10 @@ namespace FichaDeInscricao
                 Console.Write(FormatacaoText.Formatacao(fichaInscricao.Nome, fichaInscricao.Curso, fichaInscricao.ValorCurso, fichaInscricao.ValorDesconto));
             }
 
-            Console.ReadLine();
-            Console.Write("Idade: ");
-            Console.WriteLine(fichaInscricao.Idade);
 
+           
 
-            CobrarCurso cobrarCurso = new CobrarCurso(fichaInscricao.ValorCurso, fichaInscricao.ValorMulta, fichaInscricao.ValorDesconto);
-            cobrarCurso.CalcularResultado();
-            Console.WriteLine(cobrarCurso);
-
+            Console.WriteLine();
         }
     }
 }

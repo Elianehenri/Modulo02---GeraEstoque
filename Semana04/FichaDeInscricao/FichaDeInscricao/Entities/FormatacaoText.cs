@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FichaDeInscricao
+namespace FichaDeInscricao.Entities
 {
-     class FormatacaoText
+    public class FormatacaoText
     {
+
+
         //exercicio 04
         #region classe static para efetuar sobrecarga formataçao de texto 
 
