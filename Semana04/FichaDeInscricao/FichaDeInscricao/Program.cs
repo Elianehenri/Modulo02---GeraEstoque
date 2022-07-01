@@ -27,7 +27,7 @@ namespace FichaDeInscricao
             double valorMulta = int.Parse(Console.ReadLine());
            
             
-            //FichaInscricao fichaInscricao = new FichaInscricao("", " ", " ", Convert.ToDateTime(dataDeNascimento), 0, 0, 0);
+            
             FichaInscricao fichaInscricao = new FichaInscricao(nome, curso, escolaridade, Convert.ToDateTime(dataDeNascimento) ,  valorCurso, valorDesconto, valorMulta );
 
            
@@ -38,11 +38,7 @@ namespace FichaDeInscricao
             Console.WriteLine(fichaInscricao.Idade);
             FormatacaoText Formatacao = new FormatacaoText();
             cobrarCurso.Resultado.ToString("c");
-            //Console.WriteLine( );
-
-           
-
-            //Console.WriteLine();
+        
 
             if (fichaInscricao.ValorDesconto == 0)
             {
