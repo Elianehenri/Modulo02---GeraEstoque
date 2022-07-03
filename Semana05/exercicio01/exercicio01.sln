@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exer01-Heranca", "exercicio01\Exer01-Heranca.csproj", "{C59BAD85-09C1-4F95-A9D8-51EE38B6DB79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio01", "exercicio01\Exercicio01.csproj", "{C59BAD85-09C1-4F95-A9D8-51EE38B6DB79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
