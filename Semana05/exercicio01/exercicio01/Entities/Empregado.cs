@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercicio01
+namespace Exercicio01.Entities
 {
     class Empregado
     {
@@ -34,7 +34,7 @@ namespace Exercicio01
         }
         public void TirarFolga()
         {
-            Console.WriteLine( "Tirando Folga!");
+            Console.WriteLine("Tirando Folga!");
         }
     }
 }

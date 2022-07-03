@@ -1,9 +1,8 @@
-﻿
-using System.Globalization;
+﻿using System.Globalization;
 
-namespace Exercicio01
+namespace Exercicio01.Entities
 {
-   class SalarioEmpregado : Empregado
+    class SalarioEmpregado : Empregado
     {
         //propriedades
         public int CodigoFuncionario { get; set; }
@@ -24,6 +23,6 @@ namespace Exercicio01
         {
             Console.WriteLine("Realizando calculo folha de pagamento!");
         }
-        
+
     }
 }

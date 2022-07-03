@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercicio01
+namespace Exercicio01.Entities
 {
     //propriedades
     class FuncionarioHorista : Empregado
@@ -17,7 +17,7 @@ namespace Exercicio01
         {
         }
 
-        public FuncionarioHorista(int id, string cnpj,  string nome, double taxa) : base(id, nome)
+        public FuncionarioHorista(int id, string cnpj, string nome, double taxa) : base(id, nome)
         {
             Cnpj = cnpj;
             Taxa = taxa;
@@ -26,8 +26,8 @@ namespace Exercicio01
         //metodos
         public void CalcularTaxas()
         {
-            
-             Console.WriteLine("Realizando calculo das taxas!");
+
+            Console.WriteLine("Realizando calculo das taxas!");
         }
 
         public void EmitirNota()
