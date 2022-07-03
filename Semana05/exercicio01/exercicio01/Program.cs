@@ -8,6 +8,7 @@ namespace Exercicio01
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
             Console.WriteLine("Exercicios Semana 05 Professor Jaime - Herança!");
             Console.WriteLine("***********************************************");
             Console.WriteLine();
