@@ -8,6 +8,7 @@ namespace e // Note: actual namespace depends on the project name.
         {
             Console.WriteLine("Exercicios Semana 05 Professor Jaime - Herança!");
             Console.WriteLine( "***********************************************");
+            Console.WriteLine();
         }
     }
 }
