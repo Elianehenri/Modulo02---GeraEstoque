@@ -22,8 +22,7 @@ namespace TratamentoExcecoes.Entities
             Nome = name;
         }
 
-
-        
+ 
 
     }
     [Serializable]
