@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modulo2-semana6-tests", "modulo2-semana6-tests\modulo2-semana6-tests.csproj", "{FDA1692C-264C-4F8F-B4FB-74694ADF3E66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modulo2-semana6-api", "modulo2-semana6-api\modulo2-semana6-api.csproj", "{AF8857A8-B6CD-464A-82A6-68B47099DF04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FDA1692C-264C-4F8F-B4FB-74694ADF3E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA1692C-264C-4F8F-B4FB-74694ADF3E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA1692C-264C-4F8F-B4FB-74694ADF3E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8857A8-B6CD-464A-82A6-68B47099DF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8857A8-B6CD-464A-82A6-68B47099DF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8857A8-B6CD-464A-82A6-68B47099DF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8857A8-B6CD-464A-82A6-68B47099DF04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
