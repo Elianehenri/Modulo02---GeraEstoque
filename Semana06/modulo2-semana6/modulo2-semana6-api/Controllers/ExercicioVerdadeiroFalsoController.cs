@@ -7,7 +7,7 @@ namespace modulo2_semana6_api.Controllers
     [ApiController]
     public class ExercicioVerdadeiroFalsoController : ControllerBase
     {
-       //exercicio 02
+       //exercicio 01
         [HttpGet("{tipo}")]
         public string Get(string tipo)
         {
