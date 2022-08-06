@@ -54,6 +54,18 @@ namespace ApiMusicas.Repository
                 .Where(m => m.Album.Id == idAlbum)
                 .ToList();
         }
+        public Musica ObterPorId(int MusicaId)
+        {
+            var musica = _musicas.FirstOrDefault(m => m.Id == MusicaId);
+
+            if (musica == null)
+                return null;
+
+            return musica;
+
+        }
+
+       
 
     }
 }
