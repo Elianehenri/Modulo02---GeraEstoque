@@ -1,5 +1,6 @@
 using ApiMusicas.Repository;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ArtistaRepositorio>();
 builder.Services.AddScoped<AlbumRepositorio>();
 builder.Services.AddScoped<MusicaRepositorio>();
-//builder.Services.AddScoped<PlaylistsRepositorio>();
+builder.Services.AddScoped<PlaylistRepositorio>();
 
 
 

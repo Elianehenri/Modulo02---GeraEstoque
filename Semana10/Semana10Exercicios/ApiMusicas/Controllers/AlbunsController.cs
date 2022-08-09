@@ -23,6 +23,7 @@ namespace ApiMusicas.Controllers
             _artistaRepositorio = artistaRepositorio;
             _musicasRepositorio = musicaRepositorio;
         }
+
         [HttpGet]
         public ActionResult<Album> Get()
         {

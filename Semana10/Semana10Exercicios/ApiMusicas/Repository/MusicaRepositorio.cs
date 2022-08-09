@@ -42,7 +42,7 @@ namespace ApiMusicas.Repository
             _musicas.Remove(musicaExistente);
         }
 
-        public List<Musica> ObterTodos()
+        public List<Musica> ObterTodos(string nomeMusica)
         {
             return _musicas;
         }
@@ -52,6 +52,13 @@ namespace ApiMusicas.Repository
             return _musicas
                 .Where(m => m.Album != null)
                 .Where(m => m.Album.Id == idAlbum)
+                .ToList();
+        }
+        public List<Musica> ObterPorArtista(int idArtista)
+        {
+            return _musicas
+                .Where(a => a.Artista != null)
+                .Where(a => a.Artista.Id == idArtista)
                 .ToList();
         }
         public Musica ObterPorId(int MusicaId)
@@ -65,7 +72,17 @@ namespace ApiMusicas.Repository
 
         }
 
-       
+        public Musica EditarMusica(int MusicaId, Musica musica)
+        {
+            var musicaAtual = ObterPorId(MusicaId);
+
+            musicaAtual.Nome = musica.Nome;
+            musicaAtual.Duracao = musica.Duracao;
+            musicaAtual.Artista = musica.Artista;
+            musicaAtual.Album = musica.Album;
+
+            return musicaAtual;
+        }
 
     }
 }
