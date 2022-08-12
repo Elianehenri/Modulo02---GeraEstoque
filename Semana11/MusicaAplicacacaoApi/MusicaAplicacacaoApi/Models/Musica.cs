@@ -16,12 +16,7 @@ namespace MusicaAplicacacaoApi.Models
         {
         }
 
-        public Musica(string nome, double duracao, Artista artista)
-        {
-            Nome = nome;
-            Duracao = duracao;
-            Artista = artista;
-        }
+      
 
     }
 }
