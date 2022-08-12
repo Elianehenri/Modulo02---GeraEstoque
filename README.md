@@ -10,3 +10,5 @@ Exercicios da Semana 04 -aulas Professor Jamil
 Exercicios Semana  05 - Profesor Jaime. 
 #
 Exercicios Semana 06 - Professor Jamil.
+#
+Exercicios Semana 10 - Professor Vicenzo.
