@@ -2,10 +2,10 @@
 
 namespace MusicaApi.DTOs
 {
-    //public class MusicaAlbumDTO
-    //{
-    //    [Required(ErrorMessage = "O nome é obrigatório.")]
-    //    public string Nome { get; set; }
-    //    public TimeSpan Duracao { get; set; }
-    //}
+    public class MusicaAlbumDTO
+    {
+        [Required(ErrorMessage = "O nome é obrigatório.")]
+        public string Nome { get; set; }
+        public TimeSpan Duracao { get; set; }
+    }
 }
