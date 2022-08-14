@@ -9,7 +9,7 @@
 
 
         //mapear
-        public virtual int ArtistaId { get; set; }//chave estrangeira
+        public  int ArtistaId { get; set; }//chave estrangeira
         public virtual Artista Artista { get; set; }//relacionamento entre artista e o album
         public virtual List<Musica> Musicas { get; set; }
     }

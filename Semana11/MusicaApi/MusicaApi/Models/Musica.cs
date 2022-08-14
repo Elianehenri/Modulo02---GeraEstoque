@@ -14,8 +14,6 @@
         public virtual Album Album { get; set; }
 
 
-        public Musica()
-        {
-        }
+        
     }
 }
