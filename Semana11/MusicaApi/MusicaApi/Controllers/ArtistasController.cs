@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MusicaApi.Data;
 using MusicaApi.DTOs;
 using MusicaApi.Models;
@@ -93,6 +94,53 @@ public class ArtistasController : ControllerBase
 
         // 204
         return NoContent();
+
+    }
+    [HttpPost("{id}/albuns")]
+    public ActionResult<Album> PostAlbum(
+       [FromRoute] int id,
+       [FromBody] ArtistaAlbumDTO albumDTO
+   )
+    {
+        var artista = _context.Artistas.Find(id);
+
+        if (artista == null)
+            return NotFound(new RetornoComFalhaViewModel("Artista não encontrado."));
+
+        var album = new Album
+        {
+            Nome = albumDTO.Nome,
+            CapaUrl = albumDTO.CapaUrl,
+            AnoLancamento = albumDTO.AnoLancamento,
+            ArtistaId = artista.Id,
+            Musicas = albumDTO.Musicas?.Select(musicaDTO => new Musica
+            {
+                Nome = musicaDTO.Nome,
+                Duracao = musicaDTO.Duracao,
+                ArtistaId = artista.Id
+            }).ToList()
+        };
+
+        _context.Albuns.Add(album);
+        _context.SaveChanges();
+
+        var viewModel = new AlbumComMusicasViewModel(album);
+
+        return Created($"api/artistas/{id}/album", viewModel);
+    }
+
+    [HttpGet("{id}/albuns")]
+    public ActionResult<List<AlbumComMusicasViewModel>> GetAlbuns(
+        [FromRoute] int id
+    )
+    {
+        return Ok(
+            _context.Albuns
+            .Where(a => a.ArtistaId == id)
+            .Include(a => a.Musicas)
+            .Select(a => new AlbumComMusicasViewModel(a))
+            .ToList()
+        );
     }
 
 
