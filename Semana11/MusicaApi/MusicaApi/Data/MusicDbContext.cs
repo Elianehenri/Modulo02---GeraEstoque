@@ -15,6 +15,9 @@ namespace MusicaApi.Data;
     public DbSet<Artista> Artistas { get; set; }
     public DbSet<Album> Albuns { get; set; }
     public DbSet<Musica> Musicas { get; set; }
+    public DbSet<Playlist> Playlists { get; set; }
+    public DbSet<PlaylistMusica> PlaylistMusicas { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -126,7 +129,34 @@ namespace MusicaApi.Data;
 
         });
 
+        modelBuilder.Entity<Playlist>(entidade =>
+        {
+            entidade.ToTable("Playlists");
 
+            entidade.HasKey(p => p.Id);
+
+            entidade
+                .Property(p => p.Nome)
+                .IsRequired()
+                .HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<PlaylistMusica>(entidade =>
+        {
+            entidade.ToTable("PlaylistMusicas");
+
+            entidade.HasKey(p => new { p.PlaylistId, p.MusicaId });
+
+            entidade
+                .HasOne(pm => pm.Playlist)
+                .WithMany(p => p.Musicas)
+                .HasForeignKey(pm => pm.PlaylistId);
+
+            entidade
+                .HasOne(pm => pm.Musica)
+                .WithMany()
+                .HasForeignKey(pm => pm.MusicaId);
+        });
     }
 }
     
